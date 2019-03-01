@@ -19,20 +19,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BBKHUZJ" translatesAutoresizingMaskIntoConstraints="NO" id="Zme-Wx-Cxy">
-                                <rect key="frame" x="62.5" y="253.5" width="250" height="180"/>
+                                <rect key="frame" x="62.5" y="153.5" width="250" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="2Zm-RK-BIO"/>
                                     <constraint firstAttribute="width" constant="250" id="v0n-d4-x2e"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JSU-rI-bhE">
+                                <rect key="frame" x="62.5" y="341.5" width="250" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="xUR-AY-mv8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m21-JC-Iu5">
+                                <rect key="frame" x="62.5" y="373.5" width="250" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="SbG-uD-obX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="JSU-rI-bhE" firstAttribute="top" secondItem="Zme-Wx-Cxy" secondAttribute="bottom" constant="8" id="75d-zZ-NMb"/>
                             <constraint firstItem="Zme-Wx-Cxy" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IYp-On-K7W"/>
-                            <constraint firstItem="Zme-Wx-Cxy" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Prj-T4-MgM"/>
+                            <constraint firstItem="Zme-Wx-Cxy" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-100" id="Prj-T4-MgM"/>
+                            <constraint firstItem="JSU-rI-bhE" firstAttribute="width" secondItem="Zme-Wx-Cxy" secondAttribute="width" id="fH8-1v-zbC"/>
+                            <constraint firstItem="m21-JC-Iu5" firstAttribute="width" secondItem="Zme-Wx-Cxy" secondAttribute="width" id="i3v-bl-fFI"/>
+                            <constraint firstItem="m21-JC-Iu5" firstAttribute="centerX" secondItem="Zme-Wx-Cxy" secondAttribute="centerX" id="pH9-i1-0jK"/>
+                            <constraint firstItem="JSU-rI-bhE" firstAttribute="centerX" secondItem="Zme-Wx-Cxy" secondAttribute="centerX" id="qcs-eQ-uOr"/>
+                            <constraint firstItem="m21-JC-Iu5" firstAttribute="top" secondItem="JSU-rI-bhE" secondAttribute="bottom" constant="8" id="yuT-pK-YWp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="parameter1Label" destination="JSU-rI-bhE" id="yyb-m0-LES"/>
+                        <outlet property="parameter2Label" destination="m21-JC-Iu5" id="qBA-tM-Fnp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

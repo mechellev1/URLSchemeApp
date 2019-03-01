@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *parameter1Label;
+@property (weak, nonatomic) IBOutlet UILabel *parameter2Label;
 
 
 @end

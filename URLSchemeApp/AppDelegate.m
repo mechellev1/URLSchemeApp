@@ -47,7 +47,12 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    
+    if (!url) {
+        return NO;
+    }
     // handler code here
     
     NSLog(@"url received: %@", url);
@@ -64,6 +69,8 @@
     NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:6];
     NSArray *pairs = [query componentsSeparatedByString:@"&"];
     
+    
+    
     for (NSString *pair in pairs) {
         NSArray *elements = [pair componentsSeparatedByString:@"="];
         NSString *key = [[elements objectAtIndex:0] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -71,6 +78,10 @@
         
         [dict setObject:val forKey:key];
     }
+    
+    NSDictionary *savedDict = [dict copy];
+    [[NSUserDefaults standardUserDefaults] setObject:savedDict forKey:@"params"];
+    
     return dict;
 }
 
